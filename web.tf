@@ -16,3 +16,10 @@ resource "aws_instance" "dilanweb" {
 }
 
 }
+
+output "instance_ips"
+   {
+     value = ["${aws_instance.dilanweb.*.public_ip}"]
+    }
+
+
